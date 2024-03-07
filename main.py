@@ -16,3 +16,12 @@ async def post():
 @app.put("/")
 async def put():
     return {"message": "hello from the put route"}
+
+@app.get("/users")
+async def list_users():
+    return {"message": "list users route"}
+
+@app.get("/users/{user_id}")
+async def get_user(user_id: str):
+    return {"user_id": user_id}
+
